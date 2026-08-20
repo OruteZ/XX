@@ -1,7 +1,5 @@
-name: Deploy Quartz site to GitHub Pages
 
-env:
-	THEME_NAME: minimalist-studio
+name: Deploy Quartz site to GitHub Pages
 
 on:
   push:
@@ -36,7 +34,7 @@ jobs:
         with:
           path: public
       - name: Fetch Quartz Theme
-        run: curl -s -S https://raw.githubusercontent.com/saberzero1/quartz-themes/master/action.sh | bash -s -- $THEME_NAME
+        run: curl -s -S https://raw.githubusercontent.com/saberzero1/quartz-themes/master/action.sh | bash -s --minimalist-studio
   
   deploy:
     needs: build
